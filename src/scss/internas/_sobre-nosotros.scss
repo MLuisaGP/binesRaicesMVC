@@ -1,0 +1,20 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+@include mix.desktop {
+    .nosotros-contenedor{
+        @include mix.grid();
+    }
+}
+.nosotros-contenedor{
+    text-align: justify;
+    
+    @include mix.tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include mix.desktop {
+        @include mix.grid();
+    }
+}

@@ -1,0 +1,57 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.seccion-inferior{
+    margin-bottom: 2rem;
+    
+    @include mix.desktop {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2rem;
+    }
+    @include mix.tablet {
+        
+        img{
+            width: 100%;
+        }
+
+    }
+}
+.entrada-blog{
+    margin-bottom: 2rem;
+    
+    @include mix.desktop {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+        align-items: center;
+    }
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+}
+.informacion-meta{
+    span{
+        color: var.$amarillo;
+    }
+}
+.texto-entrada{
+    a{
+        color: var.$negro;
+        display: block;
+        margin-top: 2rem;
+    }
+    h4{
+        margin: 0;
+        
+        line-height: 1.4;
+        &::after{
+            content: '';
+            display: block;
+            width: 15rem;
+            height: 0.5rem;
+            background-color: var.$verde;
+            margin-top: 2rem;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+/** Media Queries **/
+@use 'base/variables' as var;
+@mixin telefono {
+    @media (min-width:var.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:var.$tablet) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width:var.$desktop) {
+        @content;
+    }
+}
+@mixin desktopXL{
+    @media (min-width : var.$desktopXL){
+        @content;
+    }
+}
+
+@mixin grid($columns:2, $gap:5rem){
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+@mixin resetear-lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin boton($bg, $colorTxt, $display){
+    background-color: $bg;
+    color:$colorTxt;
+    font-weight: var.$bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    display: $display;
+    &:hover{
+        background-color: darken($bg, 5);
+        cursor: pointer;
+    }
+}

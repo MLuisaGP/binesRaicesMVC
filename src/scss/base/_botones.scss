@@ -1,0 +1,20 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.boton-amarillo{
+    @include mix.boton(var.$amarillo, var.$blanco, inline-block);
+}
+.boton-amarillo-block{
+    @include mix.boton(var.$amarillo, var.$blanco, block);
+}
+.boton-verde{
+    @include mix.boton(var.$verde, var.$blanco, inline-block);
+}
+.boton-rojo-block{
+    @include mix.boton(var.$rojo, var.$blanco, block);
+    width: 100%;
+    border: none;
+}
+.boton-amarillo-block{
+    @include mix.boton(var.$amarillo, var.$blanco, block);
+}

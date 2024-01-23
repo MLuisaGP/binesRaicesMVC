@@ -1,0 +1,33 @@
+@use 'base/variables' as var;
+.dark-mode{
+    background-color: darken(var.$grisOscuro, 10);
+    p{ color: var.$blanco;}
+    a ,h1,h2,h3,h4{
+        color: var.$gris;
+    }
+    .anuncio{
+        background-color: var.$grisOscuro;
+        border: 1px solid var.$grisOscuro;
+        
+    }
+    .iconos-caracteristicas .icono{
+        filter: invert(100%);
+    }
+    .precio{
+        color: var.$verde;
+    }
+    .formulario{
+        label,
+        legend,
+        p{
+            color: var.$amarillo;
+        }
+        input:not([type="submit"]),
+        select,
+        textarea {//?Seleciona todos los input que no sean del tipo especificado
+            background-color: var.$grisOscuro;
+            border: var.$grisOscuro;
+            color: var.$blanco;
+        }
+    }
+}
